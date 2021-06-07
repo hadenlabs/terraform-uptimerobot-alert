@@ -1,7 +1,7 @@
 {
-  "name": "@hadenlabs/base-template",
+  "name": "@hadenlabs/terraform-uptimerobot-alert",
   "version": "0.0.0",
-  "description": "base-template",
+  "description": "terraform-uptimerobot-alert",
   "author": "Luis Mayta <slovacus@gmail.com>",
   "license": "LGPL-3.0",
   "engines": {
@@ -15,6 +15,7 @@
     "clean:build:all": "yarn clean && yarn clean:build && yarn clean:build:test",
     "clean:build:test": "yarn clean ./coverage",
     "clean:cache": "yarn clean ./node_modules/.cache",
+    "plop": "cross-env TS_NODE_PROJECT='./provision/generators/plop/ts-node.tsconfig.json' plop --plopfile provision/generators/plop/index.ts",
     "lint": "eslint --config=.github/linters/.eslintrc.js --ignore-path=.github/linters/.eslintignore ./ --ext .js,.jsx,.mjs,.d.ts,.ts,.tsx",
     "lint:fix": "yarn lint --fix",
     "lint:less": "stylelint --config=.github/linters/.stylintrc --syntax less **/*.less",
@@ -23,9 +24,9 @@
     "ncu:patch": "ncu -u --target patch",
     "prebuild": "mkdirp build && yarn run clean:build:all",
     "precommit": "lint-staged",
-    "prettier": "prettier --config=.github/linters/prettier.config.js --ignore-path=.github/linters/.prettierignore",
+    "prettier": "prettier --config=.github/linters/prettier.config.js --ignore-path=.github/linters/.prettierignore --list-different",
     "prettier:fix": "yarn prettier:lint --write=true",
-    "prettier:lint": "yarn prettier '**/*.{js?(on),ts?(x),scss,md,y?(a)ml,gql,graphql?(s),less,mjml}' --write=false --list-different"
+    "prettier:lint": "yarn prettier '**/*.{js?(on),ts?(x),scss,md,y?(a)ml,gql,graphql?(s),less,mjml}' --write=false"
   },
   "publishConfig": {
     "access": "public",
@@ -39,7 +40,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hadenlabs/base-template"
+    "url": "git+https://github.com/hadenlabs/terraform-uptimerobot-alert.git"
   },
   "keywords": [
     "hadenlabs",
@@ -48,41 +49,32 @@
     "tool"
   ],
   "bugs": {
-    "url": "https://github.com/hadenlabs/base-template/issues"
+    "url": "https://github.com/hadenlabs/terraform-uptimerobot-alert/issues"
   },
-  "homepage": "https://github.com/hadenlabs/base-template#readme",
+  "homepage": "https://github.com/hadenlabs/terraform-uptimerobot-alert#readme",
   "dependencies": {},
   "devDependencies": {
-    "@babel/eslint-parser": "^7.13.14",
-    "@commitlint/cli": "^12.1.1",
+    "@commitlint/cli": "^12.1.4",
     "@hadenlabs/commitlint-config": "^0.1.0",
-    "@types/chai": "^4.2.17",
-    "@types/mocha": "^8.2.2",
     "@types/rimraf": "^3.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.22.0",
-    "@typescript-eslint/parser": "^4.22.0",
-    "babel-cli": "^6.26.0",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
     "cross-env": "^7.0.3",
-    "chai": "^4.3.4",
-    "eslint": "^7.24.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-prettier": "^3.3.1",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-promise": "^5.1.0",
     "husky": "^6.0.0",
-    "lint-staged": "^10.5.4",
-    "mocha": "^8.3.2",
-    "prettier": "^2.2.1",
+    "lint-staged": "^11.0.0",
+    "node-plop": "^0.26.2",
+    "plop": "^2.7.4",
+    "prettier": "^2.3.1",
     "prettier-eslint": "^12.0.0",
+    "slugify": "^1.5.3",
     "rimraf": "^3.0.2",
-    "sinon": "^10.0.1",
-    "semantic-release": "^17.4.2",
-    "shelljs": "^0.8.4",
-    "stylelint": "^13.12.0",
-    "stylelint-config-standard": "^21.0.0",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.2.4"
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
   },
-  "prettier": "./.github/linters/prettier.config.js",
-  "stylintrc": ".github/linters/.stylintrc"
+  "prettier": "./.github/linters/prettier.config.js"
 }
