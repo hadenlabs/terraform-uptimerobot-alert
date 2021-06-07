@@ -5,7 +5,7 @@
 #
 
 # Name of this project
-name: base-template
+name: terraform-uptimerobot-alert
 
 email:
   support: support@hadenlabs.com
@@ -17,22 +17,22 @@ email:
 license: 'LGPL-3.0'
 
 # Canonical GitHub repo
-github_repo: hadenlabs/base-template
+github_repo: hadenlabs/terraform-uptimerobot-alert
 
 # Badges to display
 badges:
   - name: GitHub tag (latest SemVer)
-    image: https://img.shields.io/github/v/tag/hadenlabs/base-template?label=latest&sort=semver
-    url: https://github.com/hadenlabs/base-template/releases
+    image: https://img.shields.io/github/v/tag/hadenlabs/terraform-uptimerobot-alert?label=latest&sort=semver
+    url: https://github.com/hadenlabs/terraform-uptimerobot-alert/releases
   - name: Latest Release
-    image: https://img.shields.io/github/release/hadenlabs/base-template
-    url: https://github.com/hadenlabs/base-template/releases
+    image: https://img.shields.io/github/release/hadenlabs/terraform-uptimerobot-alert
+    url: https://github.com/hadenlabs/terraform-uptimerobot-alert/releases
   - name: Lint
-    image: https://img.shields.io/github/workflow/status/hadenlabs/base-template/lint-code
-    url: https://github.com/hadenlabs/base-template/actions
+    image: https://img.shields.io/github/workflow/status/hadenlabs/terraform-uptimerobot-alert/lint-code
+    url: https://github.com/hadenlabs/terraform-uptimerobot-alert/actions
   - name: Issues
-    image: https://img.shields.io/github/issues/hadenlabs/base-template
-    url: https://github.com/hadenlabs/base-template/issues
+    image: https://img.shields.io/github/issues/hadenlabs/terraform-uptimerobot-alert
+    url: https://github.com/hadenlabs/terraform-uptimerobot-alert/issues
   - name: Conventional Commits
     image: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow
     url: https://conventionalcommits.org
@@ -42,10 +42,4 @@ badges:
 
 description: |-
 
-  base-template for project
-
-  ### Replace name project to New Project
-
-  ```bash
-    agr 'base-template' 'new-project'
-  ```
+  terraform-uptimerobot-alert for project
